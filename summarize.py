@@ -1,7 +1,6 @@
 from transformers import pipeline
 import re
 
-# Load summarizer once
 summarizer = pipeline("summarization", model="Falconsai/text_summarization")
 
 def chunk_text(text, max_words=600):
@@ -129,3 +128,4 @@ if __name__ == "__main__":
         final_summary = improve_summary(raw_summary, max_words=max_words)
         print("\n Summary:\n", final_summary)
         print("\nEnter next text to summarize (or 'exit' to quit):")
+
